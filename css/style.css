@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Bài 2 */
+.bai2_content .inputNhapSo {
+  display: inline-block;
+}
+
+.bai2_content .inputNhapSo input {
+  background-color: blanchedalmond;
+  margin: 5px;
+}
+.bai4_content .inputCd,
+.inputCr {
+  display: inline-block;
+}

@@ -21,10 +21,10 @@
   </head>
 
   <body>
-    <div class="container row d-flex">
-      <div class="d-flex align-items-center">
+    <div class="container-lg position-relative">
+      <div class="d-flex row">
         <div
-          class="nav col-3 flex-column nav-pills me-3"
+          class="nav col nav_left flex-column nav-pills me-3 align-items-center"
           id="v-pills-tab"
           role="tablist"
           aria-orientation="vertical"
@@ -81,23 +81,23 @@
             class="nav-link"
             id="v-pills-bai5-tab"
             data-bs-toggle="pill"
-            data-bs-target="#v-pills-settings"
+            data-bs-target="#v-pills-bai5"
             type="button"
             role="tab"
-            aria-controls="v-pills-settings"
+            aria-controls="v-pills-bai5"
             aria-selected="false"
           >
             Bài 5
           </button>
         </div>
-        <div class="tab-content col-9" id="v-pills-tabContent">
+        <div class="tab-content col-9 nav_right" id="v-pills-tabContent">
           <div
             class="tab-pane fade show active"
             id="v-pills-home"
             role="tabpanel"
             aria-labelledby="v-pills-bai1-tab"
           >
-            <div class="container bai1_content">
+            <div class="container-md bai1_content">
               <h2>Bài 1 : Tính tiền lương nhân viên</h2>
               <div class="3Khoi">
                 <h3>Đầu vào:</h3>
@@ -119,6 +119,12 @@
                   placeholder="Nhập vào số ngày làm ... "
                 />
               </div>
+              <button class="btn btn-success btn_TienLuong">
+                Tính tiền lương
+              </button>
+              <p
+                class="bg-light border-opacity-75 disabled ketQuaTienLuong mt-3 p-3"
+              ></p>
             </div>
           </div>
           <div
@@ -127,7 +133,82 @@
             role="tabpanel"
             aria-labelledby="v-pills-bai2-tab"
           >
-            <h2>Bài 2: Tính giá trị trung bình</h2>
+            <div class="container-md bai2_content">
+              <h2>Bài 2: Tính giá trị trung bình</h2>
+              <div class="3Khoi">
+                <h3>Đầu vào:</h3>
+                <p>Nhập 5 số</p>
+                <h3>Xử lý:</h3>
+                <p>Xử lý dữ liệu đầu vào => ép kiểu dữ liệu</p>
+                <p>Giá trị trung bình = tổng 5 số chia 5</p>
+                <h3>Đầu ra:</h3>
+                <p>Giá trị trung bình của năm số</p>
+              </div>
+              <div clss="inputNumber d-flex">
+                <div class="mb-3 inputNhapSo col-3">
+                  <label for="" class="form-label">Số thứ 1</label>
+                  <input
+                    type="number"
+                    class="form-control rounded-5"
+                    name=""
+                    id="num1"
+                    aria-describedby="helpId"
+                    placeholder="Nhập vào số thứ 1 "
+                  />
+                </div>
+                <div class="mb-3 inputNhapSo col-3">
+                  <label for="" class="form-label">Số thứ 2</label>
+                  <input
+                    type="number"
+                    class="form-control rounded-5"
+                    name=""
+                    id="num2"
+                    aria-describedby="helpId"
+                    placeholder="Nhập vào số thứ 2 "
+                  />
+                </div>
+                <div class="mb-3 inputNhapSo col-3">
+                  <label for="" class="form-label">Số thứ 3</label>
+                  <input
+                    type="number"
+                    class="form-control rounded-5"
+                    name=""
+                    id="num3"
+                    aria-describedby="helpId"
+                    placeholder="Nhập vào số thứ 3"
+                  />
+                </div>
+                <div class="mb-3 inputNhapSo col-3">
+                  <label for="" class="form-label">Số thứ 4</label>
+                  <input
+                    type="number"
+                    class="form-control rounded-5"
+                    name=""
+                    id="num4"
+                    aria-describedby="helpId"
+                    placeholder="Nhập vào số thứ 4"
+                  />
+                </div>
+                <div class="mb-3 inputNhapSo col-3">
+                  <label for="" class="form-label">Số thứ 5</label>
+                  <input
+                    type="number"
+                    class="form-control rounded-5"
+                    name=""
+                    id="num5"
+                    aria-describedby="helpId"
+                    placeholder="Nhập vào số thứ 5 "
+                  />
+                </div>
+              </div>
+
+              <button
+                class="btn btn-primary rounded border-danger text-bg-danger border-opacity-75 btn_TinhTrungBinh"
+              >
+                Tính trung bình
+              </button>
+              <p class="bg-light disabled ketQuaTinhTrungBinh mt-3 p-3"></p>
+            </div>
           </div>
           <div
             class="tab-pane fade"
@@ -135,7 +216,39 @@
             role="tabpanel"
             aria-labelledby="v-pills-bai3-tab"
           >
-            <h2>Bài 3: Quy đổi tiền</h2>
+            <div class="container-md bai3_content">
+              <h2>Bài 3: Quy đổi tiền</h2>
+              <div class="3Khoi">
+                <h3>Đầu vào:</h3>
+                <p>Nhập số tiền USD</p>
+                <h3>Xử lý:</h3>
+                <p>1 USD = 23.500đ</p>
+                <p>Xử lý dữ liệu đầu vào => ép kiểu dữ liệu</p>
+                <p>Quy đổi ra số tiền Việt: Số tiền đô * 23.500 đ</p>
+                <h3>Đầu ra:</h3>
+                <p>Số tiền Việt (VND)</p>
+              </div>
+              <div clss="inputNumber d-flex">
+                <div class="mb-3 inputNhapUSD col-3">
+                  <label for="" class="form-label">Nhập số tiền USD :</label>
+                  <input
+                    type="number"
+                    class="form-control rounded-5"
+                    name=""
+                    id="USDNumber"
+                    aria-describedby="helpId"
+                    placeholder="Nhập vào số tiền USD "
+                  />
+                </div>
+              </div>
+
+              <button
+                class="btn btn-primary rounded border-danger text-bg-danger border-opacity-75 btn_QuyDoi"
+              >
+                Quy Đổi (VND)
+              </button>
+              <p class="bg-light disabled ketQuaQuyDoi mt-3 p-3 rounded"></p>
+            </div>
           </div>
           <div
             class="tab-pane fade"
@@ -143,15 +256,113 @@
             role="tabpanel"
             aria-labelledby="v-pills-bai4-tab"
           >
-            <h2>Bài 4: Tính diện tích, chu vi hình chữ nhật</h2>
+            <div class="container-md bai4_content">
+              <h2>Bài 4: Tính diện tích, chu vi hình chữ nhật</h2>
+              <div class="3Khoi">
+                <h3>Đầu vào:</h3>
+                <p>Nhập vào chiều dài , chiều rộng</p>
+                <h3>Xử lý:</h3>
+                <p>
+                  Tính: <br />
+                  Chu vi = (dài + rộng ) * 2
+                </p>
+                <p>Diện tích = dài * rộng</p>
+                <h3>Đầu ra:</h3>
+                <p>Trả về kết quả của diện tích và chu vi hcn</p>
+              </div>
+              <div clss="inputNumber d-flex ">
+                <div class="mb-3 inputCd col-3">
+                  <input
+                    type="number"
+                    class="form-control rounded-5"
+                    name=""
+                    id="chieuDai"
+                    aria-describedby="helpId"
+                    placeholder="Nhập chiều dài "
+                  />
+                </div>
+                <div class="mb-3 inputCd col-3">
+                  <input
+                    type="number"
+                    class="form-control rounded-5"
+                    name=""
+                    id="chieuRong"
+                    aria-describedby="helpId"
+                    placeholder="Nhập chiều rộng "
+                  />
+                </div>
+              </div>
+
+              <button
+                class="btn btn-warning rounded border-danger text-primary border-opacity-75 btn_TinhToan"
+              >
+                Tính
+              </button>
+              <p
+                class="bg-secondary text-white disabled ketQuaCV_DT mt-3 p-3 rounded"
+              ></p>
+            </div>
           </div>
           <div
             class="tab-pane fade"
-            id="v-pills-settings"
+            id="v-pills-bai5"
             role="tabpanel"
             aria-labelledby="v-pills-bai5-tab"
           >
-            <h2>Bài 5: Tính tổng hai ký số</h2>
+            <div class="container-md bai5_content">
+              <h2>Bài 5: Tính tổng hai ký số (Hoặc hơn)</h2>
+              <div class="3Khoi">
+                <h3>Đầu vào:</h3>
+                <p>Nhập vào một số nguyên bất kì</p>
+                <h3>Xử lý:</h3>
+                <p>
+                  Kiểm tra xem số nhập vào có phải số có 2 chữ số ko và xử lý
+                  bước tiếp theo
+                </p>
+                <p>
+                  B1 : Kiểm tra xem số bất kì lớn hơn 0 hay ko, nếu lớn hơn 0
+                  tới bước 2
+                </p>
+                <p>
+                  B2 :Lấy số bất kì chia lấy dư -> % <br />
+                  lấy số đó chia cho 10 (lấy nguyên)
+                </p>
+
+                <p>
+                  B3:Lặp lại bước 3 nếu lớn hơn 0 -> Lặp lại bước 2 tới khi lấy
+                  đc số dư cuối (dùng đệ quy) đồng thời cùng tính tổng với các
+                  số dư được tính ra
+                </p>
+                <h3>Đầu ra:</h3>
+                <p>Trả về kết quả tính tổng của một kí số</p>
+              </div>
+              <div clss="inputNumber d-flex ">
+                <div class="mb-3 inputSum col-3">
+                  <input
+                    type="text"
+                    inputmode="numeric"
+                    pattern="0 - 99"
+                    class="form-control rounded-5"
+                    name=""
+                    id="soBatKi"
+                    aria-describedby="helpId"
+                    placeholder="Nhập một số nguyên bất kì có 2 chữ số trở lên "
+                    min="0"
+                    maxlength="2"
+                    max="99"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="btn btn-warning rounded border-danger text-primary border-opacity-75 btn_TinhTong"
+              >
+                Tính Tổng
+              </button>
+              <p
+                class="bg-secondary text-white disabled ketQuaTinhTong mt-3 p-3 rounded"
+              ></p>
+            </div>
           </div>
         </div>
       </div>
