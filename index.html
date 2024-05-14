@@ -16,12 +16,30 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!-- font awesome -->
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- (Optional) Use CSS or JS implementation -->
+    <!-- <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+    integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script> -->
+
     <!-- main css -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <div class="container-lg position-relative">
+    <div class="container-md position-relative">
       <div class="d-flex row">
         <div
           class="nav col nav_left flex-column nav-pills me-3 align-items-center"
@@ -99,7 +117,7 @@
           >
             <div class="container-md bai1_content">
               <h2>Bài 1 : Tính tiền lương nhân viên</h2>
-              <div class="3Khoi">
+              <div class="baKhoi">
                 <h3>Đầu vào:</h3>
                 <p>Lương 1 ngày : 100.000 đ</p>
                 <p>Nhập số ngày làm</p>
@@ -119,12 +137,14 @@
                   placeholder="Nhập vào số ngày làm ... "
                 />
               </div>
-              <button class="btn btn-success btn_TienLuong">
+              <button class="btn btn-primary btn_TienLuong">
                 Tính tiền lương
               </button>
-              <p
-                class="bg-light border-opacity-75 disabled ketQuaTienLuong mt-3 p-3"
-              ></p>
+
+              <p class="border-opacity-75 align-items-center mt-3 ps-3 ketQua">
+                <i class="fa fa-donate hinhMoney"></i>
+                <span class="ketQuaTienLuong"> </span>
+              </p>
             </div>
           </div>
           <div
@@ -135,7 +155,7 @@
           >
             <div class="container-md bai2_content">
               <h2>Bài 2: Tính giá trị trung bình</h2>
-              <div class="3Khoi">
+              <div class="baKhoi">
                 <h3>Đầu vào:</h3>
                 <p>Nhập 5 số</p>
                 <h3>Xử lý:</h3>
@@ -202,12 +222,13 @@
                 </div>
               </div>
 
-              <button
-                class="btn btn-primary rounded border-danger text-bg-danger border-opacity-75 btn_TinhTrungBinh"
-              >
+              <button class="btn rounded border-opacity-75 btn_TinhTrungBinh">
                 Tính trung bình
               </button>
-              <p class="bg-light disabled ketQuaTinhTrungBinh mt-3 p-3"></p>
+              <p class="bg-light disabled text-dark mt-3 p-3 trungBinh">
+                <i class="fa fa-arrow-circle-right"></i>
+                <span class="ketQuaTinhTrungBinh"></span>
+              </p>
             </div>
           </div>
           <div
@@ -218,7 +239,7 @@
           >
             <div class="container-md bai3_content">
               <h2>Bài 3: Quy đổi tiền</h2>
-              <div class="3Khoi">
+              <div class="baKhoi">
                 <h3>Đầu vào:</h3>
                 <p>Nhập số tiền USD</p>
                 <h3>Xử lý:</h3>
@@ -247,7 +268,10 @@
               >
                 Quy Đổi (VND)
               </button>
-              <p class="bg-light disabled ketQuaQuyDoi mt-3 p-3 rounded"></p>
+              <p class="bg-light disabled mt-3 p-3 rounded">
+                <i class="fa fa-arrow-circle-right"></i>
+                <span class="ketQuaQuyDoi"></span>
+              </p>
             </div>
           </div>
           <div
@@ -258,7 +282,7 @@
           >
             <div class="container-md bai4_content">
               <h2>Bài 4: Tính diện tích, chu vi hình chữ nhật</h2>
-              <div class="3Khoi">
+              <div class="baKhoi">
                 <h3>Đầu vào:</h3>
                 <p>Nhập vào chiều dài , chiều rộng</p>
                 <h3>Xử lý:</h3>
@@ -298,9 +322,10 @@
               >
                 Tính
               </button>
-              <p
-                class="bg-secondary text-white disabled ketQuaCV_DT mt-3 p-3 rounded"
-              ></p>
+              <p class="bg-secondary text-white disabled mt-3 p-3 rounded">
+                <i class="fa fa-arrow-circle-right"></i>
+                <span class="ketQuaCV_DT"></span>
+              </p>
             </div>
           </div>
           <div
@@ -311,7 +336,7 @@
           >
             <div class="container-md bai5_content">
               <h2>Bài 5: Tính tổng hai ký số (Hoặc hơn)</h2>
-              <div class="3Khoi">
+              <div class="baKhoi">
                 <h3>Đầu vào:</h3>
                 <p>Nhập vào một số nguyên bất kì</p>
                 <h3>Xử lý:</h3>
@@ -346,7 +371,7 @@
                     name=""
                     id="soBatKi"
                     aria-describedby="helpId"
-                    placeholder="Nhập một số nguyên bất kì có 2 chữ số trở lên "
+                    placeholder="Nhập một số nguyên bất kì có 2 chữ số "
                     min="0"
                     maxlength="2"
                     max="99"
@@ -355,13 +380,14 @@
               </div>
 
               <button
-                class="btn btn-warning rounded border-danger text-primary border-opacity-75 btn_TinhTong"
+                class="btn rounded border-danger border-opacity-75 btn_TinhTong"
               >
                 Tính Tổng
               </button>
-              <p
-                class="bg-secondary text-white disabled ketQuaTinhTong mt-3 p-3 rounded"
-              ></p>
+              <p class="text-danger disabled mt-3 p-3 sum2KiSo rounded">
+                <i class="fa fa-arrow-circle-right"></i>
+                <span class="ketQuaTinhTong"></span>
+              </p>
             </div>
           </div>
         </div>

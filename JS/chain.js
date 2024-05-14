@@ -3,6 +3,7 @@ document.querySelector(".btn_TienLuong").onclick = function () {
   let luong1Ngay = 100000;
   let soNgayLam = document.getElementById("ngayLam").value * 1;
   let soTienLuong = luong1Ngay * soNgayLam;
+
   document.querySelector(
     ".ketQuaTienLuong"
   ).innerHTML = `Lương của bạn sau ${soNgayLam} ngày bạn đã làm là : ${soTienLuong.toLocaleString(
